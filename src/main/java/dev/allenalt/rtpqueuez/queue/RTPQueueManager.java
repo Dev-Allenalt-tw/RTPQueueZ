@@ -4,9 +4,11 @@ import dev.allenalt.rtpqueuez.RTPQueueZ;
 import dev.allenalt.rtpqueuez.utils.MessageUtils;
 import org.bukkit.*;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.io.File;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -168,7 +170,9 @@ public class RTPQueueManager {
     }
     
     private void broadcastQueueJoin(Player player, String worldType) {
-        List<String> messages = plugin.getConfig().getStringList("messages.queue-broadcast");
+        File messagesFile = new File(plugin.getDataFolder(), "messages.yml");
+        FileConfiguration messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
+        List<String> messages = messagesConfig.getStringList("queue-broadcast");
         
         for (String message : messages) {
             message = message.replace("%player%", player.getName())
