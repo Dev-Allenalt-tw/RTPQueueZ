@@ -1,0 +1,21 @@
+name: RTPQueueZ
+version: '${project.version}'
+main: dev.allenalt.rtpqueuez.RTPQueueZ
+api-version: '1.21'
+author: Dev_Allenalt_tw
+description: Random Teleport Queue Plugin
+softdepend: [PlaceholderAPI]
+
+commands:
+  rtpqueue:
+    description: Main command for RTPQueueZ
+    usage: /<command> [overworld|nether|end|status]
+    aliases: [rq, rtpq]
+
+permissions:
+  rtpqueue.use:
+    description: Allows using the RTPQueue commands
+    default: true
+  rtpqueue.admin:
+    description: Admin permissions for RTPQueue
+    default: op
