@@ -1,0 +1,35 @@
+# RTPQueueZ messages.yml
+
+version: 1.0.0 # Do not change
+
+teleport:
+  - "%prefix% &aTeleporting in &6%time%&f, Good luck!"
+win:
+  - "%prefix% &aYou won the fight!"
+lose:
+  - "%prefix% &cYou lost the fight!"
+queue-joined:
+  - "%prefix% &aYou have successfully joined the queue!"
+queue-leaved:
+  - "%prefix% &cYou have left the queue!"
+no-permission:
+  - "%prefix% &cYou are not allowed to use this command!"
+queue-broadcast:
+  - "&aRTPQueueZ"
+  - ""
+  - "&a%player% &fis looking for a fight in &a%world%!"
+  - "&fJoin queue now and take the challenge!"
+  - ""
+  - "&a@ &fCommand: &a/rtpqueue"
+
+# Titles Section
+
+teleport: "&aTeleporting in %time%"
+win: "&a&lYOU WON!"
+lose: "&c&lYOU LOST!"
+
+# Subtitles Section
+
+teleport: "&eGood luck!"
+win: "&eCongratulations"
+lose: "&eTry next time!"

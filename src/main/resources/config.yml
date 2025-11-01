@@ -1,0 +1,69 @@
+# RTPQueueZ config.yml
+
+version: 1.0.0 # Do nkt change
+
+
+prefix: "&aRTPQueueZ &7» "
+teleport-delay: 5 # In Seconds
+cooldown: 30 # In Seconds
+min-players: 2
+max-players: 2
+min-radius: 1000
+
+# RTPQueue Menu Section
+overworld-world: world
+nether-world: world_nether
+end-world: world_the_end
+
+overworld:
+  enable: true # Values true/false
+  material: GRASS_BLOCK
+  slot: 11
+  display_name: "&a&lOVERWORLD"
+  lore:
+    - ""
+    - "&6Information:"
+    - "&fClick here to queue for"
+    - "&fthe overworld world!"
+    - ""
+    - "&b> &fPlayers in queue: &6%rtpqueue_count_overworld%/2"
+    - ""
+    - "&e» Click to Queue"
+  actions:
+    - "rtpqueue overworld"
+    
+nether:
+  enable: true # Values true/false
+  material: NETHERRACK
+  slot: 13
+  display_name: "&c&lTHE NETHER"
+  lore:
+    - ""
+    - "&6Information:"
+    - "&fClick here to queue for"
+    - "&fthe overworld world!"
+    - ""
+    - "&b> &fPlayers in queue: &6%rtpqueue_count_nether%/2"
+    - ""
+    - "&e» Click to Queue"
+  actions:
+    - "rtpqueue nether"
+    
+end:
+  enable: true # Values true/false
+  material: END_STONE
+  slot: 15
+  display_name: "&3&lTHE END"
+  lore:
+    - ""
+    - "&6Information:"
+    - "&fClick here to queue for"
+    - "&fthe overworld world!"
+    - ""
+    - "&b> &fPlayers in queue: &6%rtpqueue_count_end%/2"
+    - ""
+    - "&e» Click to Queue"
+  actions:
+    - "rtpqueue end"
+    
+broadcast-queue-join: true # Values true/false
