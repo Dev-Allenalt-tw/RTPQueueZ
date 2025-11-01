@@ -42,7 +42,7 @@ public class RTPQueueCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "You are not in queue!");
                 }
             }
-            case "leave" -> {
+            case "leave", "cancel" -> {
                 if (plugin.getQueueManager().leaveQueue(player)) {
                     MessageUtils.sendMessage(player, "queue-leaved");
                 } else {
@@ -64,7 +64,7 @@ public class RTPQueueCommand implements CommandExecutor {
                 }
             }
             default -> {
-                player.sendMessage(ChatColor.RED + "Usage: /rtpqueue [overworld|nether|end|status|leave]");
+                player.sendMessage(ChatColor.RED + "Usage: /rtpqueue [overworld|nether|end|status|cancel]");
             }
         }
         
