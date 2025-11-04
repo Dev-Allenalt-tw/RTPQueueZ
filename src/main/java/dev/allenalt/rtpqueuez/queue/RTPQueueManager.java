@@ -43,7 +43,8 @@ public class RTPQueueManager {
         queues.get(worldType).add(entry);
         playersInQueue.add(player.getUniqueId());
         
-        MessageUtils.sendMessage(player, "queue-joined");
+        // Play sound when joining queue
+        player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
         
         if (plugin.getConfig().getBoolean("broadcast-queue-join", true)) {
             broadcastQueueJoin(player, worldType);
